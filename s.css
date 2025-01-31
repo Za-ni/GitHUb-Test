@@ -1,0 +1,394 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif; /* Example font */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Slightly lighter background */
+    color: #333;
+    text-align: center;
+}
+
+/* About Section */
+.about {
+    background: #f1f1f1;
+    padding: 60px 20px;
+    border-radius: 10px;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    gap: 30px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    max-width: 900px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.profile-pic:hover {
+    transform: scale(1.1);
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.skills-cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 350px;
+    width: 100%;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.card ul li {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.card ul li i {
+    margin-right: 10px;
+    color: #f39c12;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.card a {
+    display: inline-block;
+    background-color: #222;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.card a:hover {
+    background-color: #f39c12;
+}
+
+/* Icon Styles */
+.fa {
+    font-size: 1.2rem;
+}
+
+
+/* Header */
+header {
+    background: #222; /* Solid background */
+    padding: 20px;
+    color: white;
+    position: fixed; /* Keeps it on top */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Keeps it above other elements */
+    display: flex;
+    justify-content: space-between; /* Align logo and nav items */
+    align-items: center;
+}
+
+
+.logo-container {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f39c12; /* Golden hover effect */
+}
+
+/* CTA Button */
+.cta-button {
+    background-color: #f39c12; /* Golden background */
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #e67e22;
+    color: white;
+}
+
+/* Hero Section */
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('your-hero-image.jpg'); /* Add your hero image */
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px); /* Optional: Add a blur effect to the background */
+    z-index: -1;
+    opacity: 0.5;
+}
+
+/* Make header elements look better on smaller screens */
+@media (max-width: 768px) {
+    nav ul {
+        display: block;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .cta-button {
+        display: block;
+        margin-top: 10px;
+    }
+}
+
+/* Ensure no element goes over the header */
+.project-card, .profile-pic, .background-about {
+    position: relative;
+    z-index: 1;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Sections */
+.section {
+    padding: 110px 20px;
+    margin-top: 60px;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Project Grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    text-align: center;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+.project-card img {
+    width: 100%;
+    max-height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.project-links {
+    margin-top: 10px;
+}
+
+.project-links a {
+    text-decoration: none;
+    color: white;
+    background: #333;
+    padding: 8px 12px;
+    border-radius: 5px;
+    margin: 5px;
+    display: inline-block;
+    transition: background 0.3s ease-in-out;
+}
+
+.project-links a:hover {
+    background: #555;
+}
+
+/* Contact Section */
+.contact {
+    background: #f5f5f5;
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: border-color 0.3s ease-in-out;
+    margin-top: 8px;
+}
+
+input:focus, textarea:focus {
+    border-color: #f39c12;
+    outline: none;
+}
+
+textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+button {
+    padding: 12px 20px;
+    background: #f39c12;
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    margin-top: 20px;
+}
+
+button:hover {
+    background: #e67e22;
+}
+
+button:active {
+    background: #d35400;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    form {
+        width: 90%;
+    }
+}
